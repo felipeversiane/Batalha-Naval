@@ -5,6 +5,7 @@
 void inicializar(int tabuleiro[][10])
 
 {
+    printf("\n\t\t\t---------NAVAL BATTLE GAME----------\n");
 
     for(int i=0;i<10;i++)
 
@@ -66,9 +67,10 @@ void mostrar(int tabuleiro[][10],int tentativas, int acertos)
 
     }
 
-    printf("TENTATIVAS: %d \n",tentativas);
+    printf("\n\t\t---------YOU HAVE 25 TRIES  TO WIN THE GAME ----------\n");
+    printf("\nATTEMPTS: %d \n",tentativas);
 
-    printf("ACERTOS: %d",acertos);
+    printf("\nHITS: %d",acertos);
 
     printf("\n\n\n");
 
@@ -198,11 +200,11 @@ void darTiro(int tiro[])
 
 
 
-    printf("Digite a linha :");
+    printf("Enter the line with a number between 0-9 :");
 
     scanf("%i",&tiro[0]);
 
-    printf("Digite a coluna ");
+    printf("Enter the colunm with a number between 0-9 ");
 
     scanf("%d",&tiro[1]);
 
@@ -302,7 +304,7 @@ int main()
 
             alteraTabuleiro(tiro,navios,tabuleiro);
 
-            printf("VOCE ACERTOU");
+            printf("YOU WIN");
 
             acertos++;
 
@@ -310,7 +312,7 @@ int main()
 
             if(ganhou(acertos)==1)
 
-                printf("VOCE GANHOU O JOGO");
+                printf("YOU WIN");
 
 
 
@@ -320,7 +322,7 @@ int main()
 
         {
 
-        printf("VOCE ERROU");
+        printf("YOU MISSED");
 
         system("cls");
 
@@ -338,7 +340,6 @@ int main()
 
     while(tentativas<25);
 
-    printf("ACABOU,VOCE ESGOTOU SUA MUNICAO\n Voce teve um total de : %d pontos",acertos);
+    printf("IT'S OVER, YOU'RE OUT OF YOUR AMMO\n YOU HAD A TOTAL OF : %d POINTS",acertos);
 
 }
-
