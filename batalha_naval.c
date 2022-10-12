@@ -5,7 +5,6 @@
 void inicializar(int tabuleiro[][10])
 
 {
-    printf("\n\t\t\t---------NAVAL BATTLE GAME----------\n");
 
     for(int i=0;i<10;i++)
 
@@ -28,7 +27,7 @@ void inicializar(int tabuleiro[][10])
 void mostrar(int tabuleiro[][10],int tentativas, int acertos)
 
 {
-
+     printf("\n\t\t\t---------NAVAL BATTLE GAME----------\n");
     printf("\t1 \t2 \t3 \t4 \t5 \t6 \t7 \t8 \t9 \t10");
 
     printf("\n");
@@ -271,11 +270,8 @@ int ganhou(int acertos)
 
 
 }
-
-int main()
-
+void navalBattle()
 {
-
    int tabuleiro[10][10],tiro[2],tentativas=0,acertos=0;
 
    char navios[10][10];
@@ -339,7 +335,31 @@ int main()
     }
 
     while(tentativas<25);
-
+    system("cls");
     printf("IT'S OVER, YOU'RE OUT OF YOUR AMMO\n YOU HAD A TOTAL OF : %d POINTS",acertos);
+    int i;
+        i=0;
+        printf("\n\nDO YOU WANNA PLAY AGAIN?");
+        printf("\n----->ENTER[ANY NUMBER]TO YES ");
+        printf("\n----->ENTER[2]TO NO \n");
+        scanf("%d",&i);
+        if(i!=2)
+        {
+          system("cls");
+          navalBattle();
+        }
+        system("cls");
+        printf("----------I'LL SEE YOU  YOU LATER!!----------\n");
+        system("pause");
+        exit(0);
 
+
+
+
+}
+
+int main()
+
+{
+    navalBattle();
 }
